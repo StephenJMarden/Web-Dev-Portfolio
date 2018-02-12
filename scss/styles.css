@@ -1,8 +1,13 @@
 * {
   font-size: 1em; }
 
+html {
+  overflow: hidden; }
+
 body {
   overflow: hidden; }
+  body ::-webkit-scrollbar {
+    display: none; }
 
 nav {
   z-index: 300; }
@@ -28,7 +33,7 @@ nav {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 101vw;
+  width: 103vw;
   overflow: auto;
   position: absolute;
   right: -17px; }
@@ -316,6 +321,7 @@ nav {
     text-align: center;
     width: 100%; }
     #about-container .about-me-section-container img {
+      position: static;
       display: block;
       margin: 1em auto; }
     #about-container .about-me-section-container .about-me-blurb {
@@ -350,6 +356,7 @@ nav {
     text-align: center;
     padding-bottom: 5em; }
     #work-container img {
+      top: 0;
       padding-top: 2em;
       margin: 1em auto; }
     #work-container .project-description-container {
