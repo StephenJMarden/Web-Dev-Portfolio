@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Stephen Marden | Front-End Developer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=.75">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:400,700|Spectral+SC:400,600,700" rel="stylesheet">
@@ -10,36 +10,41 @@
     </head>
 
     <body>
-        <div id="page-container" class="container-fluid">
+        <div id="page-container">
             <nav>
-                <button type="button" id="navigation-hamburger" class="btn glyphicon glyphicon-menu-hamburger">
+                <button type="button" id="navigation-hamburger">
+                    <i class="fas fa-bars"></i>
                     <span class="sr-only">Toggle navigation</span>
                 </button>
                 <div id="navigation-menu">
-                    <button type="button" id="navigation-close" class="btn glyphicon glyphicon-remove text-right">
+                    <button type="button" id="navigation-close">
+                        <i class="fas fa-times"></i>
                         <span class="sr-only">Close navigation</span>
                     </button>
                     <span id="nav-title">Stephen Marden</span>
                     <ul>
-                        <a class="ham-link" href="#home-container"><li><i class="glyphicon glyphicon-home"></i>Home</li></a>
-                        <a class="ham-link" href="#about-container"><li><i class="glyphicon glyphicon-user"></i>About Me</li></a>
-                        <a class="ham-link" href="#work-container"><li><i class="glyphicon glyphicon-briefcase"></i>Work</li></a>
-                        <a class="ham-link" href="#contact-container"><li><i class="glyphicon glyphicon-envelope"></i>Contact</li></a>
+                        <a class="ham-link" href="#home-container"><li><i><i class="fas fa-home"></i></i>Home</li></a>
+                        <a class="ham-link" href="#about-container"><li><i><i class="fas fa-user"></i></i>About Me</li></a>
+                        <a class="ham-link" href="#work-container"><li><i><i class="fas fa-briefcase"></i></i>Work</li></a>
+                        <a class="ham-link" href="#contact-container"><li><i><i class="far fa-envelope"></i></i>Contact</li></a>
                     </ul>
                 </div>
             </nav>
 
-            <div id="home-container" class="container-fluid full-screen">
-                <div id="name-container" class="text-center">
+            <div id="home-container" class="full-screen">
+                <div id="name-container">
                     <div id="name">Stephen Marden</div>
                     <div id="title">Front-End Developer</div>
+                    
+                    <div id="cta-button"><a href="#contact-container">Hire Me?</a></div>
 
                     <div id="see-work">
-                        <div class="glyphicon glyphicon-chevron-down"></div>
+                        <div>Learn More About Me</div>
+                        <i><i class="fas fa-angle-down"></i></i>
                     </div>
                 </div>
             </div>
-            <div id="about-container" class="container-fluid">
+            <div id="about-container">
                 <div class="info-container">
                     <div class="section-title">
                         About Me
@@ -65,18 +70,19 @@
                     </div>
                 </div>
             </div>
-            <div id="work-container" class="container-fluid full-screen">
+            <div id="work-container" class="full-screen">
                 <div class="info-container">
                     <div class="section-title">
                         My Work
                     </div>
-                    <div class="project-container col-lg-12">
-                        <a href="http://stevesite.altervista.org/IdaPortfolio/html/index.html">
-                            <div class="project-img-container col-lg-6 col-md-12">
+                    <div class="project-container">
+                        <div class="project-img-container">
+                            <a href="http://stevesite.altervista.org/IdaPortfolio/html/index.html">
                                 <img src="assets/idaportfolio-ss-optimized.png">
-                            </div>
-                        </a>
-                        <div class="project-description col-lg-6 col-md-12">
+                            </a>
+                        </div>
+                        
+                        <div class="project-description">
                             <div class="project-description-container">
                                 <div class="project-description-title">
                                     Portfolio - Ida Ceimertz
@@ -98,13 +104,13 @@
                         </div>
                     </div>
 
-                    <div class="project-container col-lg-12">
+                    <div class="project-container">
                         <a href="http://stevesite.altervista.org/Fallout4App/fallout4-perk-app.html">
-                            <div class="project-img-container col-lg-6 col-md-12">
+                            <div class="project-img-container">
                                 <img src="assets/fallout4app-ss-optimized.png">
                             </div>
                         </a>
-                        <div class="project-description col-lg-6 col-md-12">
+                        <div class="project-description">
                             <div class="project-description-container">
                                 <div class="project-description-title">
                                     Fallout 4 Builder
@@ -128,13 +134,13 @@
                         </div>
                     </div>
 
-                    <div class="project-container col-lg-12">
+                    <div class="project-container">
                         <a href="https://mea-builder.firebaseapp.com">
-                            <div class="project-img-container col-lg-6 col-md-12">
+                            <div class="project-img-container">
                                 <img src="assets/mea-builder-ss-optimized.png">
                             </div>
                         </a>
-                        <div class="project-description col-lg-6 col-md-12">
+                        <div class="project-description">
                             <div class="project-description-container">
                                 <div class="project-description-title">
                                     ME: Andromeda Builder
@@ -158,13 +164,13 @@
                     </div>
                 </div>
             </div>
-            <div id="contact-container" class="container-fluid">
+            <div id="contact-container">
                 <div class="info-container">
                     <div id="form-container">
-                        <div id="thankyou-message-container" class="text-center">
+                        <div id="thankyou-message-container">
                             <div id="thankyou-message">Thank you for contacting me, you should expect to hear from me shortly!</div>
                         </div>
-                        <form id="email-form" class="text-center" method="POST" action="https://script.google.com/macros/s/AKfycbxof99-GMmrhiSZzGrsDEFDMjGB_f0Kfm4fADr8BAKaIamp9V0/exec">
+                        <form id="email-form" method="POST" action="https://script.google.com/macros/s/AKfycbxof99-GMmrhiSZzGrsDEFDMjGB_f0Kfm4fADr8BAKaIamp9V0/exec">
                             <div id="form-heading">
                                 Would you like to get in touch?
                             </div>
@@ -173,11 +179,11 @@
                                 within a few days.
                             </div>
                             <div id="email-invalid">Invalid email, try again...</div>
-                            <div class="form-grouping col-xs-6">
+                            <div class="form-grouping">
                                 <input id="sender-name" type="text" name="name" placeholder="Name *" required>
                                 <input id="sender-phone" type="phone" name="phone" placeholder="Phone Number">
                             </div>
-                            <div class="form-grouping-2 col-xs-6">
+                            <div class="form-grouping-2">
                                 <input id="sender-email" type="email" name="email" placeholder="Email *" required>
                                 <input id="sender-website" type="url" name="website" placeholder="Website">
                             </div>
@@ -198,7 +204,7 @@
                 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
                 crossorigin="anonymous">
         </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script src="js/main.js"></script>
         <script src="js/form-submission-handler.js"></script>
     </body>

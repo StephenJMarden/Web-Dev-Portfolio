@@ -13,7 +13,9 @@ nav {
   z-index: 300; }
   nav button {
     background: rgba(255, 0, 152, 0.7);
-    border: 1px solid #1a1a1a !important; }
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    padding: 0.25em 0.5em; }
 
 #navigation-hamburger {
   color: white;
@@ -33,10 +35,9 @@ nav {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 103vw;
+  width: 100vw;
   overflow: auto;
-  position: absolute;
-  right: -17px; }
+  position: absolute; }
 
 #home-container {
   background: url("../assets/portfolio-splash.png");
@@ -44,6 +45,8 @@ nav {
   background-position: center;
   overflow: hidden; }
   #home-container #name-container {
+    text-align: center;
+    width: 50%;
     margin: auto;
     margin-top: 30vh;
     color: white; }
@@ -54,20 +57,40 @@ nav {
     #home-container #name-container #title {
       font-size: 1.5em;
       font-family: "Lato", sans-serif; }
+    #home-container #name-container #cta-button {
+      font-family: "Lato", sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      border: 1px solid #1a1a1a;
+      background: rgba(255, 0, 152, 0.7);
+      display: inline-block;
+      padding: 1em;
+      border-radius: 5px;
+      margin-top: 5em; }
+      #home-container #name-container #cta-button a {
+        color: white;
+        text-decoration: none; }
   #home-container #see-work {
     color: white;
     font-size: 2em;
-    width: 100vw;
     position: absolute;
-    bottom: 1em; }
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto; }
     #home-container #see-work div {
-      width: 20vw;
-      margin: auto;
+      font-size: 0.75em; }
+    #home-container #see-work i {
       cursor: pointer; }
 
 .project-description {
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+  width: 50%;
+  padding-left: 3em;
+  float: right;
+  margin: 0 auto; }
   .project-description .project-description-text {
     margin: 0;
     text-align: left; }
@@ -97,8 +120,7 @@ nav {
     font-size: 1.5em; }
   .project-description .project-description-container {
     border-radius: 5px;
-    padding: 1em 0;
-    height: 308px; }
+    padding: 1em 0; }
 
 #work-container .section-title {
   color: #1a1a1a; }
@@ -107,15 +129,13 @@ nav {
   width: 1000px;
   margin: 1em auto; }
 #work-container .project-description {
-  color: rgba(26, 26, 26, 0.5);
-  padding-left: 50px; }
+  color: rgba(26, 26, 26, 0.5); }
 #work-container img {
   border: 5px solid rgba(26, 26, 26, 0.9);
   background: rgba(26, 26, 26, 0.9);
   border-radius: 5px;
-  width: 585px;
-  height: 300px;
-  margin: auto; }
+  width: 50%;
+  float: left; }
 #work-container .monitor-base {
   width: 200px;
   height: 25px;
@@ -156,7 +176,7 @@ nav {
   #contact-container form {
     background: #1a1a1a;
     border-radius: 5px;
-    margin: auto;
+    margin: 0 auto;
     width: 800px;
     padding: 1em 100px; }
     #contact-container form #form-heading, #contact-container form #form-subheading {
@@ -173,11 +193,13 @@ nav {
     #contact-container form .form-grouping, #contact-container form .form-grouping-2 {
       margin: 0;
       padding: 0;
-      width: 275px; }
+      width: 275px;
+      display: inline-block; }
     #contact-container form .form-grouping {
       margin-right: 25px; }
     #contact-container form .form-grouping-2 {
-      margin-left: 25px; }
+      margin-left: 25px;
+      float: right; }
     #contact-container form input {
       border-radius: 5px;
       padding: 0.5em;
@@ -210,7 +232,7 @@ nav {
       background: rgba(255, 0, 152, 0.7);
       padding: 0.5em;
       text-align: center;
-      margin: 1em auto; }
+      margin: 1em 100px; }
 
 #email-invalid {
   color: red;
@@ -250,12 +272,14 @@ nav {
 .project-container {
   display: block;
   overflow-y: auto;
-  margin: 0;
+  margin: 0 auto;
   padding: 8em 0;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.5); }
+  border-bottom: 1px solid rgba(26, 26, 26, 0.5);
+  text-align: center; }
+  .project-container .project-img-container {
+    text-align: center;
+    margin-bottom: 1em; }
   .project-container img {
-    width: 600px;
-    height: 308px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin: auto;
     padding: 0; }
@@ -332,40 +356,50 @@ nav {
 
   #work-container {
     text-align: center;
-    padding-bottom: 5em; }
-    #work-container img {
-      padding-top: 2em;
-      margin: 1em auto; }
-    #work-container .project-description-container {
-      width: 500px;
-      margin: 1em auto; } }
+    padding-bottom: 5em; } }
 @media (max-width: 1079px) {
+  #navigation-hamburger {
+    top: 0.2em;
+    right: 0.2em; }
+
   .info-container {
-    width: 800px; }
+    width: 80%;
+    margin: 0 auto; }
+
+  .project-description {
+    width: 100%;
+    padding: 0; }
 
   #navigation-menu {
-    width: 40vw; }
-    #navigation-menu #nav-title {
-      font-size: 3vw; }
-    #navigation-menu ul {
-      font-size: 2vw; }
-    #navigation-menu #navigation-close {
-      font-size: 3vw; }
+    width: 40vw;
+    top: 0.3em; }
 
   #work-container {
     text-align: center;
     padding-bottom: 5em; }
     #work-container img {
-      top: 0;
-      padding-top: 2em;
-      margin: 1em auto; }
-    #work-container .project-description-container {
-      width: 500px;
+      width: 100%; }
+
+  #contact-container form {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: auto; }
+    #contact-container form input {
+      width: 100%; }
+    #contact-container form textarea {
+      width: 100%;
+      margin: auto; }
+    #contact-container form .form-grouping, #contact-container form .form-grouping-2 {
+      width: 40%;
+      margin: none;
+      padding: none;
+      float: none;
+      display: inline-block; }
+    #contact-container form button {
+      width: 80%;
       margin: 1em auto; } }
 @media (max-width: 799px) {
-  .info-container {
-    width: 600px; }
-
   #navigation-menu {
     width: 50vw; }
     #navigation-menu #nav-title {
@@ -375,8 +409,26 @@ nav {
     #navigation-menu #navigation-close {
       font-size: 4vw; }
 
+  #contact-container {
+    text-align: center; }
+    #contact-container form {
+      width: 100%;
+      text-align: center;
+      padding: 1em 0; }
+      #contact-container form .form-grouping, #contact-container form .form-grouping-2 {
+        width: 100%;
+        margin: 0 auto;
+        float: none; }
+      #contact-container form input {
+        width: 100%; }
+      #contact-container form textarea {
+        width: 100%; } }
+@media (max-width: 599px) {
+  #navigation-menu {
+    width: 50vw; }
+
   #contact-container form {
-    width: 600px;
+    width: 100%;
     padding: 1em 0; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -20,6 +20,7 @@ html {
 body {
     overflow: hidden;
 
+    //Displays no scrollbar on chrome only, not important but my preferred presentation
     ::-webkit-scrollbar {
         display: none;
     }
@@ -30,7 +31,9 @@ nav {
 
     button {
         background: $nav-color;
-        border: 1px solid $almost-black !important;
+        border: 1px solid $almost-black;
+        border-radius: 5px;
+        padding: 0.25em 0.5em;
     }
 }
 
@@ -54,10 +57,10 @@ nav {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 103vw;
+    width: 100vw;
     overflow: auto;
     position: absolute;
-    right: -17px;
+   //right: -17px;
 }
 
 #home-container {
@@ -68,6 +71,8 @@ nav {
     overflow: hidden;
 
     #name-container {
+        text-align: center;
+        width: 50%;
         margin: auto;
         margin-top: 30vh;
         color: white;
@@ -82,18 +87,40 @@ nav {
             font-size: $standard-font * 1.5;
             font-family: $lato;
         }
+        
+        #cta-button {
+            font-family: $lato;
+            font-size: $standard-font * 2;
+            font-weight: bold;
+            border: 1px solid $almost-black;
+            background: $nav-color;
+            display: inline-block;
+            padding: 1em;
+            border-radius: 5px;
+            margin-top: 5em;
+            
+            a {
+                color: white;
+                text-decoration: none;    
+            }
+        }
     }
 
     #see-work {
         color: white;
         font-size: 2em;
-        width: 100vw;
         position: absolute;
         bottom: 1em;
-
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        
         div {
-            width: 20vw;
-            margin: auto;
+            font-size: $standard-font * .75;
+        }
+        
+        i {
             cursor: pointer;
         }
     }
@@ -102,6 +129,10 @@ nav {
 .project-description {
     font-size: $standard-font;
     text-align: center;
+    width: 50%;
+    padding-left: 3em;
+    float: right;
+    margin: 0 auto;
 
     .project-description-text {
         margin: 0;
@@ -141,7 +172,6 @@ nav {
     .project-description-container {
         border-radius: 5px;
         padding: 1em 0;
-        height: 308px;
     }
 }
 
@@ -159,16 +189,15 @@ nav {
 
     .project-description {
         color: rgba(26, 26, 26, 0.5);
-        padding-left: 50px;
     }
 
     img {
         border: 5px solid rgba(26, 26, 26, .9);
         background: rgba(26, 26, 26, .9);
         border-radius: 5px;
-        width: 585px;
-        height: 300px;
-        margin: auto;
+        width: 50%;
+        float: left;
+        //margin: auto;
     }
 
     .monitor-base {
@@ -227,7 +256,7 @@ nav {
     form {
         background: $almost-black;
         border-radius: 5px;
-        margin: auto;
+        margin: 0 auto;
         width: 800px;
         padding: 1em 100px;
 
@@ -250,12 +279,14 @@ nav {
             margin: 0;
             padding: 0;
             width: 275px;
+            display: inline-block;
         }
         .form-grouping {
             margin-right: 25px;
         }
         .form-grouping-2 {
             margin-left: 25px;
+            float: right;
         }
 
         input {
@@ -297,7 +328,7 @@ nav {
             background: $nav-color;
             padding: 0.5em;
             text-align: center;
-            margin: 1em auto;
+            margin: 1em 100px;
         }
     }
 }
@@ -346,13 +377,17 @@ nav {
 .project-container {
     display: block;
     overflow-y: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 8em 0;
     border-bottom: 1px solid rgba(26, 26, 26, 0.5);
+    text-align: center;
+
+   .project-img-container {
+       text-align: center;
+       margin-bottom: 1em;
+   }
 
     img {
-        width: 600px;
-        height: 308px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         margin: auto;
         padding: 0;
@@ -459,68 +494,75 @@ nav {
     #work-container {
         text-align: center;
         padding-bottom: 5em;
-
-        img {
-            padding-top: 2em;
-            margin: 1em auto;
-        }
-
-        .project-description-container {
-            width: 500px;
-            margin: 1em auto;
-        }
     }
 }
 
 @media (max-width: 1079px) {
+    #navigation-hamburger {
+        top: 0.2em;
+        right: 0.2em;
+    }
+    
     .info-container {
-        width: 800px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .project-description {
+        width: 100%;
+        padding: 0;
     }
 
     #navigation-menu {
         width: 40vw;
-
-        /*#nav-title {
-            font-size: 3vw;
-        }
-        ul {
-            font-size: 2vw;
-        }
-        #navigation-close {
-            font-size: 3vw;
-        }*/
+        top: 0.3em;
     }
 
     #work-container {
         text-align: center;
         padding-bottom: 5em;
-
+        
         img {
-            top: 0;
-            padding-top: 2em;
-            margin: 1em auto;
+            width: 100%;
         }
-
-        .project-description-container {
-            width: 500px;
-            margin: 1em auto;
+    }
+    
+    #contact-container {
+        form {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            margin: auto;
+            
+            input {
+                width: 100%;
+            }
+            
+            textarea {
+                width: 100%;
+                margin: auto;
+            }
+            
+            .form-grouping, .form-grouping-2 {
+                width: 40%;
+                margin: none;
+                padding: none;
+                float: none;
+                display: inline-block;
+            }
+            
+            button {
+                width: 80%;
+                margin: 1em auto;
+            }
         }
     }
 }
 
 @media (max-width: 799px) {
-    .info-container {
-        width: 600px;
-    }
-    
-    #navigation-hamburger {
-        top: 0.2em;
-        right: 0.2em;
-    }
 
     #navigation-menu {
         width: 50vw;
-        top: 0.3em;
 
         #nav-title {
             font-size: 4vw;
@@ -534,17 +576,32 @@ nav {
     }
 
     #contact-container {
+        text-align: center;
+        
         form {
-            width: 600px;
+            width: 100%;
+            text-align: center;
             padding: 1em 0;
+            
+            .form-grouping, .form-grouping-2 {
+                width: 100%;
+                margin: 0 auto;
+                float: none;
+            }
+            
+            input {
+                width: 100%;
+            }
+            
+            textarea {
+                width: 100%;
+            }
         }
+        
     }
 }
 
 @media (max-width: 599px) {
-    .info-container {
-        width: 400px;
-    }
 
     #navigation-menu {
         width: 50vw;
@@ -552,7 +609,7 @@ nav {
 
     #contact-container {
         form {
-            width: 400px;
+            width: 100%;
             padding: 1em 0;
         }
     }
