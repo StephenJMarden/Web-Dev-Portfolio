@@ -534,3 +534,30 @@ nav {
         }
     }
 }
+
+@media (max-width: 599px) {
+    .info-container {
+        width: 400px;
+    }
+
+    #navigation-menu {
+        width: 50vw;
+
+        /*#nav-title {
+            font-size: 4vw;
+        }
+        ul {
+            font-size: 3vw;
+        }
+        #navigation-close {
+            font-size: 4vw;
+        }*/
+    }
+
+    #contact-container {
+        form {
+            width: 400px;
+            padding: 1em 0;
+        }
+    }
+}
