@@ -512,11 +512,17 @@ nav {
     .info-container {
         width: 600px;
     }
+    
+    #navigation-hamburger {
+        top: 0.2em;
+        right: 0.2em;
+    }
 
     #navigation-menu {
         width: 50vw;
+        top: 0.3em;
 
-        /*#nav-title {
+        #nav-title {
             font-size: 4vw;
         }
         ul {
@@ -524,7 +530,7 @@ nav {
         }
         #navigation-close {
             font-size: 4vw;
-        }*/
+        }
     }
 
     #contact-container {
@@ -542,16 +548,6 @@ nav {
 
     #navigation-menu {
         width: 50vw;
-
-        /*#nav-title {
-            font-size: 4vw;
-        }
-        ul {
-            font-size: 3vw;
-        }
-        #navigation-close {
-            font-size: 4vw;
-        }*/
     }
 
     #contact-container {
