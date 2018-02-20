@@ -14,11 +14,11 @@ $lato: 'Lato', sans-serif;
 }
 
 html {
-    overflow: hidden;
+    overflow: none;
 }
 
 body {
-    overflow: hidden;
+    overflow: none;
 
     //Displays no scrollbar on chrome only, not important but my preferred presentation
     ::-webkit-scrollbar {
@@ -50,17 +50,18 @@ nav {
 .full-screen {
     position: relative;
     top: 0;
-    min-height: 100vh;
+    min-height: 100%;
+    width: 100%;
 }
 
 #page-container {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: auto;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: none;
     position: absolute;
-   //right: -17px;
 }
 
 #home-container {
@@ -197,15 +198,6 @@ nav {
         border-radius: 5px;
         width: 50%;
         float: left;
-        //margin: auto;
-    }
-
-    .monitor-base {
-        width: 200px;
-        height: 25px;
-        background: rgba(26, 26, 26, 1);
-        border-radius: 100% 100% 0 0;
-        margin-left: 192.5px;
     }
 }
 
@@ -503,6 +495,15 @@ nav {
         right: 0.2em;
     }
     
+    #about-container {
+        .about-me-section-container {
+            .about-me-blurb {
+            width: 80%;
+            margin: 0 auto;
+        }    
+        }
+    }
+    
     .info-container {
         width: 80%;
         margin: 0 auto;
@@ -560,6 +561,21 @@ nav {
 }
 
 @media (max-width: 799px) {
+    
+    #home-container {
+        #name-container {
+            #cta-button {
+                margin-top: 2em;
+            }
+        }
+    }
+    
+    #about-container {
+        img {
+            width: 50%;
+            height: auto;
+        }
+    }
 
     #navigation-menu {
         width: 50vw;
@@ -602,6 +618,29 @@ nav {
 }
 
 @media (max-width: 599px) {
+    
+    #home-container {
+        #name-container {
+            margin-top: 15vh;
+            width: 80%;
+        }
+    }
+    
+    #work-container {
+        .section-title {
+            margin-bottom: -1em;
+        }
+        .project-container {
+            padding: 4em 0;
+        }
+    }
+    
+    #about-container {
+        img {
+            width: 50% !important;
+            height: auto !important;
+        }
+    }
 
     #navigation-menu {
         width: 50vw;
@@ -611,6 +650,22 @@ nav {
         form {
             width: 100%;
             padding: 1em 0;
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    #home-container {
+        #name-container {
+            #name {
+                font-size: $standard-font * 2;
+            }    
+        }
+    }
+    
+    #work-container {
+        .project-description-title {
+            font-size: $standard-font * 1.75;
         }
     }
 }
