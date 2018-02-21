@@ -8,9 +8,18 @@ $roboto: 'Roboto', sans-serif;
 $spectral-sc: 'Spectral SC', serif;
 $lato: 'Lato', sans-serif;
 
+//TODO:
+//Fix about me width to 100%;
+//Make hamburger menu more responsive, possibly 100% of screen on mobile;
+//Make technologies used darker in work section;
+//Tweak responsiveness for mid-tier phones (320px);
+//Responsiveness for low tier phones (240px);
+
 * {
     font-size: $standard-font;
     $font-family: roboto;
+    padding: 0;
+    margin: 0;
 }
 
 html {
