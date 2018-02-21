@@ -20,7 +20,7 @@ $(".ham-link").on("click", function(event) {
     var linkTarget = $(this).attr("href");
     scrollToDiv(linkTarget);
 
-    $("#navigation-menu").animate({right: "-100vw"});
+    $("#navigation-menu").animate({right: "-100vw"}).fadeToggle(0);
     $("#navigation-hamburger").fadeToggle(toggleSpeed);
 })
 
