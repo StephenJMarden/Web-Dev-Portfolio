@@ -23,11 +23,11 @@ $lato: 'Lato', sans-serif;
 }
 
 html {
-    overflow: none;
+    overflow: hidden;
 }
 
 body {
-    overflow: none;
+    overflow: hidden;
 
     //Displays no scrollbar on chrome only, not important but my preferred presentation
     ::-webkit-scrollbar {

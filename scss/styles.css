@@ -4,10 +4,10 @@
   margin: 0; }
 
 html {
-  overflow: none; }
+  overflow: hidden; }
 
 body {
-  overflow: none; }
+  overflow: hidden; }
   body ::-webkit-scrollbar {
     display: none; }
 
