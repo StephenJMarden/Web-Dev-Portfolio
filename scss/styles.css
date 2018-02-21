@@ -43,10 +43,32 @@ nav {
   overflow-x: none;
   position: absolute; }
 
-#home-container {
+#home-background {
+  z-index: -1;
   background: url("../assets/portfolio-splash.png");
   background-size: cover;
   background-position: center;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%; }
+
+#home-container {
+  /*background: url('../assets/portfolio-splash.png');
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);*/
+  background: none;
   overflow: hidden; }
   #home-container #name-container {
     text-align: center;
@@ -78,7 +100,7 @@ nav {
     color: white;
     font-size: 2em;
     position: absolute;
-    bottom: 1em;
+    bottom: 0.5em;
     left: 0;
     right: 0;
     text-align: center;
@@ -92,7 +114,7 @@ nav {
   font-size: 1em;
   text-align: center;
   width: 50%;
-  padding-left: 3em;
+  padding-left: 4%;
   float: right;
   margin: 0 auto; }
   .project-description .project-description-text {
@@ -107,7 +129,6 @@ nav {
     font-family: "Lato", sans-serif; }
   .project-description .project-description-technologies {
     font-size: 0.8em;
-    font-weight: lighter;
     text-align: left;
     margin: 0;
     padding-bottom: 1em; }
@@ -138,7 +159,7 @@ nav {
   border: 5px solid rgba(26, 26, 26, 0.9);
   background: rgba(26, 26, 26, 0.9);
   border-radius: 5px;
-  width: 50%;
+  width: 45%;
   float: left; }
 
 #about-container {
@@ -176,7 +197,8 @@ nav {
     border-radius: 5px;
     margin: 0 auto;
     width: 800px;
-    padding: 1em 100px; }
+    padding: 1em 100px;
+    text-align: center; }
     #contact-container form #form-heading, #contact-container form #form-subheading {
       color: white;
       text-align: center; }
@@ -191,17 +213,18 @@ nav {
     #contact-container form .form-grouping, #contact-container form .form-grouping-2 {
       margin: 0;
       padding: 0;
-      width: 275px;
+      width: 45%;
       display: inline-block; }
     #contact-container form .form-grouping {
-      margin-right: 25px; }
+      margin-right: 25px;
+      float: left; }
     #contact-container form .form-grouping-2 {
       margin-left: 25px;
       float: right; }
     #contact-container form input {
       border-radius: 5px;
       padding: 0.5em;
-      width: 275px;
+      width: 100%;
       margin: 1em 0;
       display: block;
       border: 1px solid #1a1a1a;
@@ -213,7 +236,7 @@ nav {
       resize: none;
       height: 10em;
       padding: 0.5em;
-      width: 600px;
+      width: 100%;
       border-radius: 5px;
       border: 1px solid #1a1a1a;
       background: rgba(255, 255, 255, 0.5); }
@@ -230,7 +253,7 @@ nav {
       background: rgba(255, 0, 152, 0.7);
       padding: 0.5em;
       text-align: center;
-      margin: 1em 100px; }
+      margin: 1em auto; }
 
 #email-invalid {
   color: red;
@@ -276,7 +299,9 @@ nav {
   text-align: center; }
   .project-container .project-img-container {
     text-align: center;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto; }
   .project-container img {
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin: auto;
@@ -288,23 +313,32 @@ nav {
   z-index: 5;
   position: fixed;
   top: 3.5em;
-  right: -50vw;
-  width: 25vw;
+  right: -100vw;
+  width: 25%;
   background: #1a1a1a;
   border: 1px solid white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: none; }
   #navigation-menu #navigation-close {
     position: absolute;
     right: 0.5em;
     top: 0.5em;
-    font-size: 2vw;
+    font-size: 2em;
     cursor: pointer;
     color: white; }
   #navigation-menu #nav-title {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    font-size: 2vw;
+    display: inline-block;
+    padding-top: 1em;
+    margin-left: 1em;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    font-family: "Lato", sans-serif; }
+  #navigation-menu #nav-emblem {
+    display: none;
+    padding-top: 1em;
+    margin-left: 1em;
+    font-size: 2em;
     color: white;
     font-weight: bold;
     font-family: "Lato", sans-serif; }
@@ -312,11 +346,10 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 4em;
-    font-size: 1.5vw; }
+    margin-top: 1em;
+    font-size: 1.5em; }
     #navigation-menu ul li {
       padding: 1em 2em;
-      width: 100%;
       background-color: rgba(255, 255, 255, 0.1);
       display: block;
       border: 1px solid #1a1a1a;
@@ -330,12 +363,21 @@ nav {
     #navigation-menu a i {
       margin-right: 1em; }
 
-@media (max-width: 1200px) {
-  .info-container {
-    width: 1080px; }
-
+@media (max-width: 1499px) {
   #navigation-menu {
-    width: 30vw; }
+    width: 30%; } }
+@media (max-width: 1299px) {
+  #navigation-menu {
+    width: 35%; } }
+@media (max-width: 1199px) {
+  #navigation-menu {
+    width: 40%; }
+
+  #home-container #name-container #cta-button {
+    margin-top: 3em; }
+
+  .info-container {
+    width: 80%; }
 
   #about-container .about-me-section-container {
     margin: auto;
@@ -347,15 +389,33 @@ nav {
       display: block;
       margin: 1em auto; }
     #about-container .about-me-section-container .about-me-blurb {
-      width: 600px;
+      width: 80%;
       padding: 0 1em;
       text-align: left;
       margin: 1em; }
 
   #work-container {
     text-align: center;
-    padding-bottom: 5em; } }
+    padding-bottom: 5em; }
+    #work-container .project-img-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0; }
+    #work-container .project-container {
+      text-align: center; }
+    #work-container img {
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+    #work-container .project-description {
+      width: 90%;
+      float: none;
+      margin: 0 auto;
+      padding-left: 0; } }
 @media (max-width: 1079px) {
+  #home-container #name-container #cta-button {
+    margin-top: 2em; }
+
   #navigation-hamburger {
     top: 0.2em;
     right: 0.2em; }
@@ -368,19 +428,9 @@ nav {
     width: 80%;
     margin: 0 auto; }
 
-  .project-description {
-    width: 100%;
-    padding: 0; }
-
   #navigation-menu {
-    width: 40vw;
-    top: 0.3em; }
-
-  #work-container {
-    text-align: center;
-    padding-bottom: 5em; }
-    #work-container img {
-      width: 100%; }
+    top: 0.3em;
+    width: 40%; }
 
   #contact-container form {
     width: 100%;
@@ -396,27 +446,25 @@ nav {
       width: 40%;
       margin: none;
       padding: none;
-      float: none;
       display: inline-block; }
     #contact-container form button {
       width: 80%;
       margin: 1em auto; } }
+@media (max-width: 899px) {
+  #navigation-menu {
+    width: 50%; } }
 @media (max-width: 799px) {
-  #home-container #name-container #cta-button {
-    margin-top: 2em; }
+  #home-container #name-container {
+    width: 80%; }
+    #home-container #name-container #cta-button {
+      margin-top: 2em; }
 
   #about-container img {
     width: 50%;
     height: auto; }
 
   #navigation-menu {
-    width: 50vw; }
-    #navigation-menu #nav-title {
-      font-size: 4vw; }
-    #navigation-menu ul {
-      font-size: 3vw; }
-    #navigation-menu #navigation-close {
-      font-size: 4vw; }
+    width: 60%; }
 
   #contact-container {
     text-align: center; }
@@ -432,31 +480,67 @@ nav {
         width: 100%; }
       #contact-container form textarea {
         width: 100%; } }
+@media (max-width: 699px) {
+  #navigation-menu {
+    width: 70%; } }
 @media (max-width: 599px) {
   #home-container #name-container {
     margin-top: 15vh;
     width: 80%; }
+    #home-container #name-container #name {
+      font-size: 2em; }
+    #home-container #name-container #cta-button {
+      font-size: 1.5em; }
 
   #work-container .section-title {
     margin-bottom: -1em; }
   #work-container .project-container {
     padding: 4em 0; }
+  #work-container .project-description {
+    margin-top: 0.5em; }
+    #work-container .project-description .project-description-title {
+      font-size: 1.1em; }
 
   #about-container img {
     width: 50% !important;
     height: auto !important; }
 
   #navigation-menu {
-    width: 50vw; }
+    width: 80%; }
 
   #contact-container form {
     width: 100%;
     padding: 1em 0; } }
+@media (max-width: 499px) {
+  #navigation-menu {
+    width: 90%; } }
 @media (max-width: 399px) {
+  #navigation-menu #nav-title {
+    display: none; }
+  #navigation-menu #nav-emblem {
+    display: inline-block; }
+
   #home-container #name-container #name {
     font-size: 2em; }
+  #home-container #name-container #cta-button {
+    font-size: 1.5em; }
+  #home-container #see-work div {
+    font-size: 0.5em; }
 
   #work-container .project-description-title {
     font-size: 1.75em; } }
+@media (max-height: 599px) {
+  #home-container #name-container {
+    margin-top: 15vh;
+    width: 80%; }
+    #home-container #name-container #name {
+      font-size: 2em; }
+    #home-container #name-container #cta-button {
+      font-size: 1.5em; }
+  #home-container #see-work div {
+    font-size: 0.5em; } }
+@media (max-height: 399px) {
+  #home-container #name-container #cta-button {
+    margin-top: 1em; } }
 
 /*# sourceMappingURL=styles.css.map */

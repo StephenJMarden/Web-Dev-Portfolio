@@ -9,10 +9,10 @@ $(".project-container").on("mouseleave", function() {
 
 $("#navigation-hamburger").on("click", function(event) {
     $("#navigation-hamburger").fadeToggle(toggleSpeed);
-    $("#navigation-menu").animate({right: "1em"});
+    $("#navigation-menu").fadeToggle(0).animate({right: "1em"});
 })
 $("#navigation-close").on("click", function(event) {
-    $("#navigation-menu").animate({right: "-50vw"});
+    $("#navigation-menu").animate({right: "-100vw"}).fadeToggle(0);
     $("#navigation-hamburger").fadeToggle(toggleSpeed);
 })
 $(".ham-link").on("click", function(event) {
@@ -20,7 +20,7 @@ $(".ham-link").on("click", function(event) {
     var linkTarget = $(this).attr("href");
     scrollToDiv(linkTarget);
 
-    $("#navigation-menu").animate({right: "-50vw"});
+    $("#navigation-menu").animate({right: "-100vw"});
     $("#navigation-hamburger").fadeToggle(toggleSpeed);
 })
 

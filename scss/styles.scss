@@ -8,13 +8,6 @@ $roboto: 'Roboto', sans-serif;
 $spectral-sc: 'Spectral SC', serif;
 $lato: 'Lato', sans-serif;
 
-//TODO:
-//Fix about me width to 100%;
-//Make hamburger menu more responsive, possibly 100% of screen on mobile;
-//Make technologies used darker in work section;
-//Tweak responsiveness for mid-tier phones (320px);
-//Responsiveness for low tier phones (240px);
-
 * {
     font-size: $standard-font;
     $font-family: roboto;
@@ -73,11 +66,36 @@ nav {
     position: absolute;
 }
 
-#home-container {
-
+#home-background {
+    z-index: -1;
     background: url('../assets/portfolio-splash.png');
     background-size: cover;
     background-position: center;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+#home-container {
+
+    /*background: url('../assets/portfolio-splash.png');
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);*/
+    
+    background: none;
     overflow: hidden;
 
     #name-container {
@@ -120,7 +138,7 @@ nav {
         color: white;
         font-size: 2em;
         position: absolute;
-        bottom: 1em;
+        bottom: 0.5em;
         left: 0;
         right: 0;
         text-align: center;
@@ -140,7 +158,7 @@ nav {
     font-size: $standard-font;
     text-align: center;
     width: 50%;
-    padding-left: 3em;
+    padding-left: 4%;
     float: right;
     margin: 0 auto;
 
@@ -160,7 +178,6 @@ nav {
 
     .project-description-technologies {
         font-size: $standard-font * 0.8;
-        font-weight: lighter;
         text-align: left;
         margin: 0;
         padding-bottom: 1em;
@@ -205,7 +222,7 @@ nav {
         border: 5px solid rgba(26, 26, 26, .9);
         background: rgba(26, 26, 26, .9);
         border-radius: 5px;
-        width: 50%;
+        width: 45%;
         float: left;
     }
 }
@@ -260,6 +277,7 @@ nav {
         margin: 0 auto;
         width: 800px;
         padding: 1em 100px;
+        text-align: center;
 
         #form-heading, #form-subheading {
             color: white;
@@ -279,11 +297,12 @@ nav {
         .form-grouping, .form-grouping-2 {
             margin: 0;
             padding: 0;
-            width: 275px;
+            width: 45%;
             display: inline-block;
         }
         .form-grouping {
             margin-right: 25px;
+            float: left;
         }
         .form-grouping-2 {
             margin-left: 25px;
@@ -293,7 +312,7 @@ nav {
         input {
             border-radius: 5px;
             padding: 0.5em;
-            width: 275px;
+            width: 100%;
             margin: 1em 0;
             display: block;
             border: 1px solid $almost-black;
@@ -308,7 +327,7 @@ nav {
             resize: none;
             height: 10em;
             padding: 0.5em;
-            width: 600px;
+            width: 100%;
             border-radius: 5px;
             border: 1px solid $almost-black;
             background: rgba(255, 255, 255, 0.5);
@@ -329,7 +348,7 @@ nav {
             background: $nav-color;
             padding: 0.5em;
             text-align: center;
-            margin: 1em 100px;
+            margin: 1em auto;
         }
     }
 }
@@ -386,6 +405,8 @@ nav {
    .project-img-container {
        text-align: center;
        margin-bottom: 1em;
+       margin-left: auto;
+       margin-right: auto;
    }
 
     img {
@@ -403,26 +424,37 @@ nav {
     z-index: 5;
     position: fixed;
     top: 3.5em;
-    right: -50vw;
-    width: 25vw;
+    right: -100vw;
+    width: 25%;
     background: $almost-black;
     border: 1px solid white;
     border-radius: 5px;
+    display: none;
 
     #navigation-close {
         position: absolute;
         right: 0.5em;
         top: 0.5em;
-        font-size: 2vw;
+        font-size: $standard-font * 2;
         cursor: pointer;
         color: white;
     }
 
     #nav-title {
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        font-size: 2vw;
+        display: inline-block;
+        padding-top: 1em;
+        margin-left: 1em;
+        font-size: 2em; //2em
+        color: white;
+        font-weight: bold;
+        font-family: $lato;
+    }
+    
+    #nav-emblem {
+        display: none;
+        padding-top: 1em;
+        margin-left: 1em;
+        font-size: 2em; //2em
         color: white;
         font-weight: bold;
         font-family: $lato;
@@ -432,12 +464,11 @@ nav {
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-top: 4em;
-        font-size: 1.5vw;
+        margin-top: 1em;
+        font-size: $standard-font * 1.5;
 
         li {
             padding: 1em 2em;
-            width: 100%;
             background-color: rgba(255, 255, 255, 0.1);
             display: block;
             border: 1px solid $almost-black;
@@ -460,14 +491,34 @@ nav {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1499px) {
+    #navigation-menu {
+        width: 30%;
+    }
+}
 
-    .info-container {
-        width: 1080px;
+@media (max-width: 1299px) {
+    #navigation-menu {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1199px) {
+    
+    #navigation-menu {
+        width: 40%;
+    }
+    
+    #home-container {
+        #name-container {
+            #cta-button {
+                margin-top: 3em;
+            }
+        }
     }
 
-    #navigation-menu {
-        width: 30vw;
+    .info-container {
+        width: 80%;
     }
 
     #about-container {
@@ -484,21 +535,53 @@ nav {
             }
 
             .about-me-blurb {
-                width: 600px;
+                width: 80%;
                 padding: 0 1em;
                 text-align: left;
                 margin: 1em;
             }
         }
     }
-
+    
     #work-container {
         text-align: center;
         padding-bottom: 5em;
+        
+        .project-img-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .project-container {
+            text-align: center;
+        }
+        
+        img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .project-description {
+            width: 90%;
+            float: none;
+            margin: 0 auto;
+            padding-left: 0;
+        }
     }
 }
 
 @media (max-width: 1079px) {
+    
+    #home-container {
+        #name-container {
+            #cta-button {
+                margin-top: 2em;
+            }
+        }
+    }
+    
     #navigation-hamburger {
         top: 0.2em;
         right: 0.2em;
@@ -507,9 +590,9 @@ nav {
     #about-container {
         .about-me-section-container {
             .about-me-blurb {
-            width: 80%;
-            margin: 0 auto;
-        }    
+                width: 80%;
+                margin: 0 auto;
+            }    
         }
     }
     
@@ -517,24 +600,10 @@ nav {
         width: 80%;
         margin: 0 auto;
     }
-    
-    .project-description {
-        width: 100%;
-        padding: 0;
-    }
 
     #navigation-menu {
-        width: 40vw;
         top: 0.3em;
-    }
-
-    #work-container {
-        text-align: center;
-        padding-bottom: 5em;
-        
-        img {
-            width: 100%;
-        }
+        width: 40%;
     }
     
     #contact-container {
@@ -557,7 +626,6 @@ nav {
                 width: 40%;
                 margin: none;
                 padding: none;
-                float: none;
                 display: inline-block;
             }
             
@@ -569,10 +637,18 @@ nav {
     }
 }
 
+@media (max-width: 899px) {
+    #navigation-menu {
+        width: 50%;
+    }
+}
+
 @media (max-width: 799px) {
     
     #home-container {
         #name-container {
+            width: 80%;
+            
             #cta-button {
                 margin-top: 2em;
             }
@@ -587,17 +663,7 @@ nav {
     }
 
     #navigation-menu {
-        width: 50vw;
-
-        #nav-title {
-            font-size: 4vw;
-        }
-        ul {
-            font-size: 3vw;
-        }
-        #navigation-close {
-            font-size: 4vw;
-        }
+        width: 60%;
     }
 
     #contact-container {
@@ -626,12 +692,25 @@ nav {
     }
 }
 
+@media (max-width: 699px) {
+    #navigation-menu {
+        width: 70%;
+    }
+}
+
 @media (max-width: 599px) {
     
     #home-container {
         #name-container {
             margin-top: 15vh;
             width: 80%;
+            
+            #name {
+                font-size: $standard-font * 2;
+            }
+            #cta-button {
+                font-size: $standard-font * 1.5;
+            }
         }
     }
     
@@ -641,6 +720,12 @@ nav {
         }
         .project-container {
             padding: 4em 0;
+        }
+        .project-description {
+            margin-top: 0.5em;
+            .project-description-title {
+                font-size: $standard-font * 1.1;
+            }    
         }
     }
     
@@ -652,7 +737,7 @@ nav {
     }
 
     #navigation-menu {
-        width: 50vw;
+        width: 80%;
     }
 
     #contact-container {
@@ -663,18 +748,75 @@ nav {
     }
 }
 
+@media (max-width: 499px) {
+    #navigation-menu {
+        width: 90%;
+    }
+}
+
 @media (max-width: 399px) {
+    #navigation-menu {
+        
+        #nav-title {
+            display: none;
+        }
+        #nav-emblem {
+            display: inline-block;
+        }
+    }
+    
     #home-container {
         #name-container {
             #name {
                 font-size: $standard-font * 2;
-            }    
+            }
+            #cta-button {
+                font-size: $standard-font * 1.5;
+            }
+        }
+        
+        #see-work {
+            div {
+                font-size: $standard-font * 0.5;
+            }
         }
     }
     
     #work-container {
         .project-description-title {
             font-size: $standard-font * 1.75;
+        }
+    }
+}
+
+@media (max-height: 599px) {
+    #home-container {
+        #name-container {
+            margin-top: 15vh;
+            width: 80%;
+            
+            #name {
+                font-size: $standard-font * 2;
+            }
+            #cta-button {
+                font-size: $standard-font * 1.5;
+            }
+        }
+        
+        #see-work {
+            div {
+                font-size: $standard-font * 0.5;
+            }
+        }
+    }
+}
+
+@media (max-height: 399px) {
+    #home-container {
+        #name-container {
+            #cta-button {
+                margin-top: 1em;
+            }
         }
     }
 }
