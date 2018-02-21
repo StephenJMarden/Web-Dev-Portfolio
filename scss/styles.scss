@@ -331,6 +331,7 @@ nav {
             border-radius: 5px;
             border: 1px solid $almost-black;
             background: rgba(255, 255, 255, 0.5);
+            color: white;
 
             &::placeholder {
                 color: white;
@@ -752,6 +753,14 @@ nav {
     #navigation-menu {
         width: 90%;
     }
+    
+    #contact-container {
+        form {
+            button {
+                font-size: 1.8em;
+            }
+        }
+    }
 }
 
 @media (max-width: 399px) {
@@ -785,6 +794,31 @@ nav {
     #work-container {
         .project-description-title {
             font-size: $standard-font * 1.75;
+        }
+        
+        .project-description-technologies {
+            font-size: $standard-font * 0.6;
+        }
+    }
+    
+    #contact-container {
+        form {
+            #form-heading {
+                font-size: 1.8em;
+            }
+            #form-subheading {
+                font-size: 1.2em;
+            }
+            
+            textarea {
+                &::placeholder {
+                    font-size: 80%;
+                }
+            }
+            
+            button {
+                font-size: 1.5em;
+            }
         }
     }
 }

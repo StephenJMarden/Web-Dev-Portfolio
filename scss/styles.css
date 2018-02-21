@@ -239,7 +239,8 @@ nav {
       width: 100%;
       border-radius: 5px;
       border: 1px solid #1a1a1a;
-      background: rgba(255, 255, 255, 0.5); }
+      background: rgba(255, 255, 255, 0.5);
+      color: white; }
       #contact-container form textarea::placeholder {
         color: white;
         font-weight: bold; }
@@ -513,7 +514,10 @@ nav {
     padding: 1em 0; } }
 @media (max-width: 499px) {
   #navigation-menu {
-    width: 90%; } }
+    width: 90%; }
+
+  #contact-container form button {
+    font-size: 1.8em; } }
 @media (max-width: 399px) {
   #navigation-menu #nav-title {
     display: none; }
@@ -528,7 +532,18 @@ nav {
     font-size: 0.5em; }
 
   #work-container .project-description-title {
-    font-size: 1.75em; } }
+    font-size: 1.75em; }
+  #work-container .project-description-technologies {
+    font-size: 0.6em; }
+
+  #contact-container form #form-heading {
+    font-size: 1.8em; }
+  #contact-container form #form-subheading {
+    font-size: 1.2em; }
+  #contact-container form textarea::placeholder {
+    font-size: 80%; }
+  #contact-container form button {
+    font-size: 1.5em; } }
 @media (max-height: 599px) {
   #home-container #name-container {
     margin-top: 15vh;
