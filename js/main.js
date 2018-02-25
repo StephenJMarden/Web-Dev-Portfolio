@@ -18,6 +18,7 @@ $("#navigation-close").on("click", function(event) {
 $(".ham-link").on("click", function(event) {
     event.preventDefault();
     var linkTarget = $(this).attr("href");
+    
     scrollToDiv(linkTarget);
 
     $("#navigation-menu").animate({right: "-100vw"}).fadeToggle(0);
