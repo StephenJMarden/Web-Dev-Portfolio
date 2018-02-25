@@ -60,14 +60,6 @@ nav {
   width: 100%; }
 
 #home-container {
-  /*background: url('../assets/portfolio-splash.png');
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);*/
   background: none;
   overflow: hidden; }
   #home-container #name-container {
@@ -182,11 +174,15 @@ nav {
       width: 700px;
       display: inline-block;
       vertical-align: top;
-      margin-left: 100px; }
+      margin-left: 100px;
+      text-align: center; }
       #about-container .about-me-section-container .about-me-blurb .about-me-subheading {
+        text-align: left;
         font-size: 1.5em;
         font-weight: bold;
         padding: 0.75em 0; }
+      #about-container .about-me-section-container .about-me-blurb p {
+        text-align: left; }
 
 #contact-container {
   background-color: #1a1a1a; }
@@ -364,6 +360,20 @@ nav {
     #navigation-menu a i {
       margin-right: 1em; }
 
+.link-icons {
+  font-size: 3em;
+  margin: 2em 0.5em;
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 0.3em;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  text-align: center;
+  background: rgba(255, 0, 152, 0.7); }
+  .link-icons a {
+    color: white;
+    text-decoration: none; }
+
 @media (max-width: 1499px) {
   #navigation-menu {
     width: 30%; } }
@@ -392,8 +402,14 @@ nav {
     #about-container .about-me-section-container .about-me-blurb {
       width: 80%;
       padding: 0 1em;
-      text-align: left;
+      text-align: center;
       margin: 1em; }
+    #about-container .about-me-section-container .link-icons {
+      margin-top: 1em; }
+    #about-container .about-me-section-container .about-subheading {
+      text-align: left; }
+    #about-container .about-me-section-container p {
+      text-align: left; }
 
   #work-container {
     text-align: center;
@@ -505,6 +521,8 @@ nav {
   #about-container img {
     width: 50% !important;
     height: auto !important; }
+  #about-container .link-icons {
+    font-size: 2em; }
 
   #navigation-menu {
     width: 80%; }
@@ -553,7 +571,10 @@ nav {
     #home-container #name-container #cta-button {
       font-size: 1.5em; }
   #home-container #see-work div {
-    font-size: 0.5em; } }
+    font-size: 0.5em; }
+
+  #navigation-menu ul {
+    font-size: 1em; } }
 @media (max-height: 399px) {
   #home-container #name-container #cta-button {
     margin-top: 1em; } }
