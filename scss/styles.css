@@ -509,6 +509,9 @@ nav {
     #home-container #name-container #cta-button {
       font-size: 1.5em; }
 
+  #home-background {
+    background: url("../assets/portfolio-splash-mobile-min.png"); }
+
   #work-container .section-title {
     margin-bottom: -1em; }
   #work-container .project-container {
