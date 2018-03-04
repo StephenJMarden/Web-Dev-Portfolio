@@ -743,6 +743,11 @@ nav {
     
     #home-background {
         background: url('../assets/portfolio-splash-mobile-min.png');
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+        filter: none;
     }
     
     #work-container {
