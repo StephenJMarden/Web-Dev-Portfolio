@@ -511,6 +511,8 @@ nav {
 
   #home-background {
     background: url("../assets/portfolio-splash-mobile-min.png");
+    background-position: center;
+    background-size: cover;
     -webkit-filter: none;
     -moz-filter: none;
     -o-filter: none;
